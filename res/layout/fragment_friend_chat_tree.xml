@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:clickable="true"
+              android:orientation="vertical">
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ExpandableListView
+                    android:id="@+id/friend_chat_tree_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:divider="@null"
+                    android:groupIndicator="@null"
+                    android:fadingEdge="none"
+                    android:focusable="true"
+                    android:scrollingCache="true"
+                    android:transcriptMode="normal"/>
+
+            <TextView
+                    android:id="@+id/empty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/contact_user_null_bg"
+                    android:visibility="gone"/>
+        </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include
+            layout="@layout/actionbar"
+            android:focusable="true"/>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        <ExpandableListView
+                android:id="@+id/friend_chat_tree_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@null"
+                android:groupIndicator="@null"
+                android:fadingEdge="none"
+                android:focusable="true"
+                android:scrollingCache="true"
+                android:transcriptMode="normal"/>
+        <Button
+                android:id="@+id/person_info_btn_edit_info"
+                style="@style/ButtonRed"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/common_btn_black_actionsheet"
+                android:text="@string/choose_person"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <TextView
+                android:id="@+id/empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/contact_user_null_bg"
+                android:visibility="gone"/>
+    </FrameLayout>
+
+</LinearLayout>

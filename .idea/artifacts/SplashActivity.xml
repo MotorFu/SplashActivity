@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="apk" name="SplashActivity">
+    <output-path>$PROJECT_DIR$/out/artifacts/SplashActivity</output-path>
+    <properties id="android-properties">
+      <options>
+        <option name="keyStoreUrl" value="file://D:/weather.jks" />
+        <option name="proGuardCfgFiles">
+          <list>
+            <option value="file://C:/Program Files (x86)/android/sdk/tools/proguard/proguard-android.txt" />
+          </list>
+        </option>
+        <option name="signingMode" value="DEBUG" />
+      </options>
+    </properties>
+    <root id="archive" name="SplashActivity.apk">
+      <element id="android-final-package" facet="SplashActivity/android/Android" />
+    </root>
+  </artifact>
+</component>

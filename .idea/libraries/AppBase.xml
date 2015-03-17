@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="AppBase">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/asmack-android-6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/nineoldandroids-2.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

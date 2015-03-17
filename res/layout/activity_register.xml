@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/common_background_color"
+              android:layout_height="match_parent">
+    <include
+            layout="@layout/actionbar"
+            android:focusable="true"/>
+    <RelativeLayout
+            android:paddingTop="50dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+        <LinearLayout
+                android:id="@+id/input"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25.0dip"
+                android:layout_marginRight="25.0dip"
+                android:layout_marginTop="25.0dip"
+                android:background="@drawable/as_input_frame"
+                android:orientation="vertical" >
+
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                <EditText
+                        android:id="@+id/register_input_account"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="请输入账号"
+                        android:maxLength="50"
+                        android:paddingBottom="6.0dip"
+                        android:paddingLeft="90dip"
+                        android:paddingTop="6.0dip"
+                        android:singleLine="true"
+                        android:textColor="#ff333333"
+                        android:textSize="20sp" />
+
+                <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/register_input_account"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="@string/account"
+                        android:textColor="#ff333333"
+                        android:textSize="20sp" />
+            </RelativeLayout>
+
+            <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="#ffcfd4da" />
+
+            <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                <EditText
+                        android:id="@+id/register_input_password"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/password_input_prompt"
+                        android:inputType="textPassword"
+                        android:maxLength="16"
+                        android:maxLines="1"
+                        android:paddingBottom="6.0dip"
+                        android:paddingLeft="90dip"
+                        android:paddingTop="6.0dip"
+                        android:textColor="#ff333333"
+                        android:textSize="20sp"
+                         />
+
+                <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/register_input_password"
+                        android:gravity="center"
+                        android:text="@string/password"
+                        android:textColor="#ff333333"
+                        android:textSize="20sp" />
+            </RelativeLayout>
+            <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="#ffcfd4da" />
+
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                <EditText
+                        android:id="@+id/register_input_password_again"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/again_password_input_prompt"
+                        android:inputType="textPassword"
+                        android:maxLength="16"
+                        android:maxLines="1"
+                        android:paddingBottom="6.0dip"
+                        android:paddingLeft="90dip"
+                        android:paddingTop="6.0dip"
+                        android:textColor="#ff333333"
+                        android:textSize="20sp"
+                         />
+
+                <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_alignBaseline="@id/register_input_password_again"
+                        android:text="@string/again_password"
+                        android:textColor="#ff333333"
+                        android:textSize="20sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_alignLeft="@id/input"
+                android:layout_alignRight="@id/input"
+                android:layout_below="@id/input"
+                android:layout_marginTop="5.0dip"
+                android:padding="1.0dip" >
+
+            <Button
+                    android:id="@+id/register_btn_register"
+                    style="@style/login_Font"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/chat_send_button_bg"
+                    android:gravity="center"
+                    android:text="@string/register"
+                    android:textColor="#ffffffff"
+                    android:textSize="17.0sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

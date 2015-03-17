@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:clickable="true"
+              android:orientation="vertical">
+
+    <include
+            layout="@layout/custom_commen_title"
+            android:focusable="true"/>
+
+    <include
+            layout="@layout/net_status_bar_info_top"
+            android:visibility="gone"/>
+
+    <View
+            android:id="@+id/xxx01"
+            android:layout_width="0dip"
+            android:layout_height="0dip"/>
+
+    <View
+            android:id="@+id/xxx02"
+            android:layout_width="0dip"
+            android:layout_height="0dip"/>
+
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/main_fragment_content">
+    </RelativeLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bottom_bar_normal_bg"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout">
+
+        <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+            <Button
+                    android:id="@+id/btn_friend_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_bottom_item_bg"
+                    android:drawableTop="@drawable/tab_chat_bg"
+                    android:onClick="onClickTabButtun"
+                    android:paddingBottom="2dip"
+                    android:paddingTop="7dip"
+                    android:scaleType="matrix"
+                    android:text="好友通讯录"
+                    android:textColor="@color/main_botton_text_color"
+                    android:textSize="12sp" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/tab_unread_bg"
+                    android:gravity="center"
+                    android:text="7"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+            <Button
+                    android:id="@+id/btn_group_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_bottom_item_bg"
+                    android:drawableTop="@drawable/tab_contact_list_bg"
+                    android:paddingBottom="2dip"
+                    android:onClick="onClickTabButtun"
+                    android:paddingTop="7dip"
+                    android:scaleType="matrix"
+                    android:text="群组聊天"
+                    android:textColor="@color/main_botton_text_color"
+                    android:textSize="12sp" />
+
+            <TextView
+                    android:id="@+id/unread_address_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/tab_unread_bg"
+                    android:gravity="center"
+                    android:text="7"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:visibility="invisible" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <requestFocus/>
+</LinearLayout>

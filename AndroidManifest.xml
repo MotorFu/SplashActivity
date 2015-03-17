@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zxq.xmpp"
+    android:versionCode="3"
+    android:versionName="@string/app_version" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 此权限用来显示反馈崩溃信息对话框 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name = "android.permission.CAMERA" />
+    <uses-feature android:name = "android.hardware.camera" />
+    <uses-feature android:name = "android.hardware.camera.autofocus" />
+    <!-- 判断堆栈中是否有本应用的权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name="com.zxq.app.XmppApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Default.NoTitleBar" >
+        <activity
+            android:name="com.zxq.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Default.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zxq.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Default.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+            <intent-filter>
+                <action android:name="com.zxq.xx.action.LOGIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zxq.activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Default.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.zxq.activity.ChatActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Default.SwipeBack.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <action android:name="com.zxq.xx.action.CHAT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.zxq.activity.GroupChatActivity"
+                android:alwaysRetainTaskState="true"
+                android:configChanges="locale|keyboardHidden|orientation|screenSize"
+                android:exported="true"
+                android:hardwareAccelerated="true"
+                android:launchMode="singleTop"
+                android:theme="@style/Default.SwipeBack.NoTitleBar"
+                android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <action android:name="com.zxq.xx.action.CHAT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.zxq.activity.AboutActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Default.SwipeBack.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+                android:name="com.zxq.activity.RegisterActivity"
+                android:alwaysRetainTaskState="true"
+                android:configChanges="locale|keyboardHidden|orientation|screenSize"
+                android:exported="true"
+                android:hardwareAccelerated="true"
+                android:launchMode="singleTop"
+                android:theme="@style/Default.SwipeBack.NoTitleBar"
+                android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+                android:name="com.zxq.activity.PersonInfoActivity"
+                android:alwaysRetainTaskState="true"
+                android:configChanges="locale|keyboardHidden|orientation|screenSize"
+                android:exported="true"
+                android:hardwareAccelerated="true"
+                android:launchMode="singleTop"
+                android:theme="@style/Default.SwipeBack.NoTitleBar"
+                android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+                android:name="com.zxq.activity.EditPersonInfoActivity"
+                android:alwaysRetainTaskState="true"
+                android:configChanges="locale|keyboardHidden|orientation|screenSize"
+                android:exported="true"
+                android:hardwareAccelerated="true"
+                android:launchMode="singleTop"
+                android:theme="@style/Default.SwipeBack.NoTitleBar"
+                android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+                android:name="com.zxq.activity.EditPersonPasswordActivity"
+                android:alwaysRetainTaskState="true"
+                android:configChanges="locale|keyboardHidden|orientation|screenSize"
+                android:exported="true"
+                android:hardwareAccelerated="true"
+                android:launchMode="singleTop"
+                android:theme="@style/Default.SwipeBack.NoTitleBar"
+                android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.zxq.activity.FeedBackActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Default.SwipeBack.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+                android:name="com.zxq.activity.CurrentUserChooseActivity"
+                android:alwaysRetainTaskState="true"
+                android:configChanges="locale|keyboardHidden|orientation|screenSize"
+                android:exported="true"
+                android:hardwareAccelerated="true"
+                android:launchMode="singleTop"
+                android:theme="@style/Default.SwipeBack.NoTitleBar"
+                android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+                android:name="com.zxq.activity.GroupOccupantsActivity"
+                android:alwaysRetainTaskState="true"
+                android:configChanges="locale|keyboardHidden|orientation|screenSize"
+                android:exported="true"
+                android:hardwareAccelerated="true"
+                android:launchMode="singleTop"
+                android:theme="@style/Default.SwipeBack.NoTitleBar"
+                android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+                android:name="com.zxq.activity.EditGroupInfoActivity"
+                android:alwaysRetainTaskState="true"
+                android:configChanges="locale|keyboardHidden|orientation|screenSize"
+                android:exported="true"
+                android:hardwareAccelerated="true"
+                android:launchMode="singleTop"
+                android:theme="@style/Default.SwipeBack.NoTitleBar"
+                android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+                android:name="com.zxq.activity.CreateGroupChatActivity"
+                android:alwaysRetainTaskState="true"
+                android:configChanges="locale|keyboardHidden|orientation|screenSize"
+                android:exported="true"
+                android:hardwareAccelerated="true"
+                android:launchMode="singleTop"
+                android:theme="@style/Default.SwipeBack.NoTitleBar"
+                android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+                android:name="com.zxq.activity.FriendInfoActivity"
+                android:alwaysRetainTaskState="true"
+                android:configChanges="locale|keyboardHidden|orientation|screenSize"
+                android:exported="true"
+                android:hardwareAccelerated="true"
+                android:launchMode="singleTop"
+                android:theme="@style/Default.SwipeBack.NoTitleBar"
+                android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <service android:name="com.zxq.service.XmppService" />
+
+        <receiver android:name="com.zxq.app.XmppBroadcastReceiver" >
+            <intent-filter>
+
+                <!-- 开机广播 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- 关机广播 -->
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <!-- 网络连接变化的广播 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.zxq.broadcast.InviterBroadcast">
+            <intent-filter>
+                <action android:name="invitation_action_for_recevier"/>
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.zxq.db.ChatProvider"
+            android:authorities="com.zxq.xx.provider.Chats" />
+        <provider
+            android:name="com.zxq.db.RosterProvider"
+            android:authorities="com.zxq.xx.provider.Roster" />
+    </application>
+
+</manifest>

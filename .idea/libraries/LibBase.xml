@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="LibBase">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/qqEmoji-lib/libs/android-support-v4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
